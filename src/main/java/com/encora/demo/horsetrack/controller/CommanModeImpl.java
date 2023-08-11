@@ -103,7 +103,8 @@ public class CommanModeImpl implements CommandMode {
 	@Override
 	public void execute(String commandexecuted) {
 		System.out.println("Command Executed : " + commandexecuted);
-		if (!StringUtils.isEmpty(commandexecuted)) {
+		String checkForSpace = commandexecuted.trim();
+		if (!StringUtils.isEmpty(checkForSpace)) {
 			if ((commandService.parseCommand(commandexecuted).equalsIgnoreCase("invalid"))) {
 				reportService.printInvalidCommand(commandexecuted);
 			} else {
