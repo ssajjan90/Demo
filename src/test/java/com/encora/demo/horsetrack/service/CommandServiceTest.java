@@ -5,7 +5,7 @@ package com.encora.demo.horsetrack.service;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
@@ -17,9 +17,8 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class CommandServiceTest {
 
-//	  This we shoud not create manually facing the issue so manually created as of now
 	  @InjectMocks
-	  CommandService commandService = new CommandService();
+	  CommandService commandService;
 
 
 	  @Before

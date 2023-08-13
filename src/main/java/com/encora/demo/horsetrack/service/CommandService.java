@@ -39,7 +39,10 @@ public class CommandService {
 	    String[] commandComponents = Arrays.stream(commandLine.split(" "))
 	        .map(String::trim)
 	        .toArray(String[]::new);
-
+	    if(commandComponents[0] == null || commandComponents[0] == "") {
+	    	currentCommand = "invalid";
+		      return currentCommand;
+	    }
 	    if (commandComponents[0].equalsIgnoreCase("q")) {
 	      currentCommand = "quit";
 	      return currentCommand;
